@@ -10,7 +10,7 @@ import java.util.function.BiPredicate
 import java.util.stream
 import java.{lang, util}
 
-class FilesContractImpl extends FilesContract {
+object FilesDelegate extends FilesContract {
   override def newInputStream(path: Path, options: OpenOption*): InputStream = Files.newInputStream(path, options: _*)
 
   override def getLastModifiedTime(path: Path, options: LinkOption*): FileTime = Files.getLastModifiedTime(path, options: _*)
