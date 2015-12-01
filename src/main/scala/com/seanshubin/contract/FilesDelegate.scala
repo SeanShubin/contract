@@ -83,7 +83,7 @@ object FilesDelegate extends FilesContract {
 
   override def newDirectoryStream(dir: Path, filter: Filter[_ >: Path]): DirectoryStream[Path] = Files.newDirectoryStream(dir, filter)
 
-  override def write(path: Path, bytes: Array[Byte], options: OpenOption*): Path = Files.write(path, bytes, options: _*)
+  override def write(path: Path, bytes: Seq[Byte], options: OpenOption*): Path = Files.write(path, bytes.toArray, options: _*)
 
   override def write(path: Path, lines: lang.Iterable[_ <: CharSequence], cs: Charset, options: OpenOption*): Path = Files.write(path, lines, cs, options: _*)
 
@@ -129,7 +129,7 @@ object FilesDelegate extends FilesContract {
 
   override def setLastModifiedTime(path: Path, time: FileTime): Path = Files.setLastModifiedTime(path, time)
 
-  override def readAllBytes(path: Path): Array[Byte] = Files.readAllBytes(path)
+  override def readAllBytes(path: Path): Seq[Byte] = Files.readAllBytes(path)
 
   override def exists(path: Path, options: LinkOption*): Boolean = Files.exists(path, options: _*)
 

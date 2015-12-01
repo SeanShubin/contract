@@ -84,7 +84,7 @@ abstract class FilesNotImplemented extends FilesContract {
 
   override def newDirectoryStream(dir: Path, filter: Filter[_ >: Path]): DirectoryStream[Path] = ???
 
-  override def write(path: Path, bytes: Array[Byte], options: OpenOption*): Path = ???
+  override def write(path: Path, bytes: Seq[Byte], options: OpenOption*): Path = ???
 
   override def write(path: Path, lines: Iterable[_ <: CharSequence], cs: Charset, options: OpenOption*): Path = ???
 
@@ -130,7 +130,7 @@ abstract class FilesNotImplemented extends FilesContract {
 
   override def setLastModifiedTime(path: Path, time: FileTime): Path = ???
 
-  override def readAllBytes(path: Path): Array[Byte] = ???
+  override def readAllBytes(path: Path): Seq[Byte] = ???
 
   override def exists(path: Path, options: LinkOption*): Boolean = ???
 
