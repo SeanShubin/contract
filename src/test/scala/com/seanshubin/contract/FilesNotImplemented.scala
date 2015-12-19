@@ -11,7 +11,7 @@ import java.util
 import java.util.function.BiPredicate
 import java.util.stream.Stream
 
-abstract class FilesNotImplemented extends FilesContract {
+trait FilesNotImplemented extends FilesContract {
   override def newInputStream(path: Path, options: OpenOption*): InputStream = ???
 
   override def getLastModifiedTime(path: Path, options: LinkOption*): FileTime = ???

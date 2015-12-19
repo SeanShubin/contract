@@ -5,7 +5,7 @@ import java.nio.channels.Channel
 import java.util
 import java.util.Properties
 
-abstract class SystemNotImplemented extends SystemContract {
+trait SystemNotImplemented extends SystemContract {
   override def in: InputStream = ???
 
   override def setSecurityManager(s: SecurityManager): Unit = ???
