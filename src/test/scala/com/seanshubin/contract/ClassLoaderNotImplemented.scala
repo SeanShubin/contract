@@ -4,7 +4,7 @@ import java.io.InputStream
 import java.net.URL
 import java.util
 
-class ClassLoaderNotImplemented extends ClassLoaderContract {
+trait ClassLoaderNotImplemented extends ClassLoaderContract {
   override def loadClass(name: String): Class[_] = ???
 
   override def clearAssertionStatus(): Unit = ???
