@@ -57,7 +57,14 @@ trait SystemContract {
 
   def runFinalization()
 
-  @deprecated def runFinalizersOnExit(value: Boolean)
+  @deprecated(
+    message =
+      "This method is inherently unsafe.  It may result in" +
+        "finalizers being called on live objects while other threads are" +
+        "concurrently manipulating those objects, resulting in erratic" +
+        "behavior or deadlock.",
+    since = "JDK1.1")
+  def runFinalizersOnExit(value: Boolean)
 
   def load(filename: String)
 

@@ -52,7 +52,13 @@ trait SystemNotImplemented extends SystemContract {
 
   override def mapLibraryName(libname: String): String = ???
 
-  @deprecated
+  @deprecated(
+    message =
+      "This method is inherently unsafe.  It may result in" +
+        "finalizers being called on live objects while other threads are" +
+        "concurrently manipulating those objects, resulting in erratic" +
+        "behavior or deadlock.",
+    since = "JDK1.1")
   override def runFinalizersOnExit(value: Boolean): Unit = ???
 
   override def out: PrintStream = ???
