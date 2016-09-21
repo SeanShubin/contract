@@ -4,7 +4,7 @@ import java.io.File
 import java.lang.ProcessBuilder.Redirect
 import java.util
 
-class ProcessBuilderNotImplemented extends ProcessBuilderContract {
+trait ProcessBuilderNotImplemented extends ProcessBuilderContract {
   override def command(command: util.List[String]): ProcessBuilderContract = ???
 
   override def directory(directory: File): ProcessBuilderContract = ???

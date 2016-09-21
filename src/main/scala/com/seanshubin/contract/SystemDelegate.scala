@@ -5,7 +5,7 @@ import java.nio.channels.Channel
 import java.util
 import java.util.Properties
 
-class SystemDelegate extends SystemContract {
+object SystemDelegate extends SystemContract {
   override def in: InputStream = System.in
 
   override def setSecurityManager(s: SecurityManager): Unit = System.setSecurityManager(s)
