@@ -1,4 +1,4 @@
-package com.seanshubin.contract
+package com.seanshubin.contract.domain
 
 import java.io.{Console, InputStream, PrintStream}
 import java.nio.channels.Channel

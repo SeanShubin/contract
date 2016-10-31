@@ -1,4 +1,4 @@
-package com.seanshubin.contract
+package com.seanshubin.contract.domain
 
 import java.io.{BufferedReader, BufferedWriter, InputStream, OutputStream}
 import java.nio.channels.SeekableByteChannel
@@ -116,13 +116,13 @@ trait FilesContract {
 
   def copy(source: Path, out: OutputStream): Long
 
-  def readAllBytes(path: Path): Seq[Byte]
+  def readAllBytes(path: Path): Array[Byte]
 
   def readAllLines(path: Path, cs: Charset): util.List[String]
 
   def readAllLines(path: Path): util.List[String]
 
-  def write(path: Path, bytes: Seq[Byte], options: OpenOption*): Path
+  def write(path: Path, bytes: Array[Byte], options: OpenOption*): Path
 
   def write(path: Path, lines: lang.Iterable[_ <: CharSequence], cs: Charset, options: OpenOption*): Path
 
