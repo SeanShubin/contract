@@ -24,5 +24,6 @@
   global [scala-library scala-test]
   modules {
     domain  []
+    test    [domain]
   }
 }
