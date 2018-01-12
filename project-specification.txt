@@ -1,0 +1,28 @@
+{
+  prefix [com seanshubin]
+  name [contract]
+  description 'Hide difficult to test java libraries behind an interface'
+  version 0.1-SNAPSHOT
+  developer {
+    name 'Sean Shubin'
+    githubName SeanShubin
+    mavenUserName SeanShubin
+    organization 'Sean Shubin'
+    url http://seanshubin.com/
+  }
+  dependencies {
+    scala-library {
+      group org.scala-lang
+      artifact scala-library
+    }
+    scala-test {
+      group org.scalatest
+      artifact scalatest_2.12
+      scope test
+    }
+  }
+  global [scala-library scala-test]
+  modules {
+    domain  []
+  }
+}
